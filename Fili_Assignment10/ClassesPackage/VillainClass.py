@@ -1,10 +1,10 @@
 #Villain Class
-class Villian():
-    def setVillianName(self, name):
-        self.validateVillianName
-    def validateVillianName(self, name):
+class Villain():
+    def setVillainName(self, name):
+        self.validateVillainName
+    def validateVillainName(self, name):
         if name == '':
-            print("Enter villian name")
+            print("Enter villain name")
         else:
             self.name = name
     def setGender(self, gender):
@@ -26,16 +26,22 @@ class Villian():
     def validateUniverse(self, universe):
         if universe == '':
             print("Villain must be a member of a universe")
+        else:
+            self.universe = universe
+    def setVillainPower(self, power):
+        self.validateVillainPower(power)
+    def validateVillainPower(self, power):
+        if power == '':
+            print("Villain must have a power")
+        else:
+            self.power = power
             
-    def __init__(self, name, gender, status, universe):
-        self.name = name
-        self.validateVillianName(name)
-        self.gender = gender
+    def __init__(self, name, gender, status, universe, power):
+        self.validateVillainName(name)
         self.validateGender(gender)
-        self.setVillainStatus = status
         self.validateVillainStatus(status)
-        self.setUniverse = universe
         self.validateUniverse(universe)
+        self.validateVillainPower(power)
     def __repr__(self):
         '''
         Return a string representation of the object
@@ -43,7 +49,7 @@ class Villian():
         return "name = " + self.name
     def __str__(self):
         '''
-        return a 'pretty string representaion of the object
+        return a 'pretty string representation of the object
         '''
-        return "name = " + self.name + ", " + self.gender + ", " + self.status + ", " + self.universe 
+        return "name = " + self.name + ", " + "gender = " + self.gender + ", " + "status = " + self.status + ", " + "universe = " + self.universe + ", " + "power = " + self.power
         
