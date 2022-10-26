@@ -52,5 +52,5 @@ class SideKick():
         '''
         return a 'pretty string representation of the object
         '''
-        return "name = " + self.name + ", " + self.gender + ", " + self.status + ", " + self.universe 
+        return "name = " + self.name + ", " + self.gender + ", " + self.status + ", " + self.hero + ", " + self.universe 
         
