@@ -33,6 +33,8 @@ class SideKick():
     def validateUniverse(self, universe):
         if universe == '':
             print("Sidekick must be a member of a universe")
+        else: 
+            self.universe = universe
             
     def __init__(self, name, gender, status, hero, universe):
         self.name = name
@@ -52,5 +54,5 @@ class SideKick():
         '''
         return a 'pretty string representation of the object
         '''
-        return "name = " + self.name + ", " + self.gender + ", " + self.status + ", " + self.hero + ", " + self.universe 
+        return "name: " + self.name + ", gender: " + self.gender + ", status: " + self.status + ", hero: " + self.hero + ", universe: " + self.universe 
         
