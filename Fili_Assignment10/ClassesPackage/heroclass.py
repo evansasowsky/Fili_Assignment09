@@ -20,26 +20,39 @@ class Hero():
         self.validateGender(gender)
     def validateGender(self, gender):
         if gender == '':
-            print ("Enter hero gender")
+            print ("Enter hero's suspected gender")
         else:
             self.gender = gender
-    def setStatus(self, status):
-        self.validateStatus(status)
-    def validateStatus(self, status):
+    def setHeroStatus(self, status):
+        self.validateHeroStatus(status)
+    def validateHeroStatus(self, status):
         if status == '':
-            print ("Enter if deceased or alive")
+            print ("Enter hero status")
         else:
             self.status = status
-    def __init__(self, name, gender, status):
-        self.name = name  
-        self.validateName
+    def setUniverse(self, universe):
+        self.validateUniverse(universe)
+    def validateUniverse(self, universe):
+        if universe == '':
+            print("Hero must be a member of a universe")
+    def __init__(self, name, gender, status, universe):
+        self.name = name
+        self.validateHeroName(name)
+        self.gender = gender
+        self.validateGender(gender)
+        self.setHeroStatus = status
+        self.validateHeroStatus(status)
+        self.setUniverse = universe
+        self.validateUniverse(universe)
     def __repr__(self):
         '''
-        return a string representation of the object.
+        Return a string representation of the object
         '''
-        return "brand = " + self.brand
+        return "name = " + self.name
     def __str__(self):
         '''
-        return a 'pretty' string representation of the object
+        return a 'pretty string representaion of the object
         '''
-        return "brand = " + self.brand + ", " + str(self.size)
+        return "name = " + self.name + ", " + self.gender + ", " + self.status + ", " + self.universe 
+    
+    
