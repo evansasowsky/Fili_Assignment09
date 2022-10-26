@@ -16,6 +16,8 @@ class Hero():
             print ("Enter hero name")
         else:
             self.name = name
+    def getHeroName(self):
+        return self.name
     def setGender(self, gender):
         self.validateGender(gender)
     def validateGender(self, gender):
@@ -23,7 +25,7 @@ class Hero():
             print ("Enter hero's suspected gender")
         else:
             self.gender = gender
-    def setHeroStatus(self, status):
+    def HeroStatus(self, status):
         self.validateHeroStatus(status)
     def validateHeroStatus(self, status):
         if status == '':
@@ -35,6 +37,8 @@ class Hero():
     def validateUniverse(self, universe):
         if universe == '':
             print("Hero must be a member of a universe")
+        else:
+            self.universe = universe
     def __init__(self, name, gender, status, universe):
         self.name = name
         self.validateHeroName(name)
@@ -51,7 +55,7 @@ class Hero():
         return "name = " + self.name
     def __str__(self):
         '''
-        return a 'pretty string representaion of the object
+        return a 'pretty string representation of the object
         '''
         return "name = " + self.name + ", " + self.gender + ", " + self.status + ", " + self.universe 
     

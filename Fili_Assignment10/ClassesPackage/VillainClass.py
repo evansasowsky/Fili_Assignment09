@@ -14,6 +14,8 @@ class Villain():
             print("Enter hero's suspected gender")
         else:
             self.gender = gender
+    def getVillainPower(self):
+        return self.power
     def setVillainStatus(self, status):
         self.validateVillainStatus(status)
     def validateVillainStatus(self, status):

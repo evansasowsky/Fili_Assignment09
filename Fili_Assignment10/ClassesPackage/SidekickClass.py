@@ -2,7 +2,7 @@
 class SideKick():
     def setSideKickName(self, name):
         self.validateSideKickName
-    def validateVillianName(self, name):
+    def validateSideKickName(self, name):
         if name == '':
             print("Enter sidekick name")
         else:
@@ -15,7 +15,7 @@ class SideKick():
         else:
             self.gender = gender
     def setSideKickStatus(self, status):
-        self.validateVillainStatus(status)
+        self.validateSideKickStatus(status)
     def validateSideKickStatus(self, status):
         if status == '':
             print("Enter Sidekick status")
@@ -28,6 +28,8 @@ class SideKick():
             print("Enter sidekick's hero")
         else:
             self.hero = hero
+    def getSideKickHero(self):
+        return self.hero
     def setUniverse(self, universe):
         self.validateUniverse(universe)
     def validateUniverse(self, universe):
@@ -40,11 +42,10 @@ class SideKick():
         self.name = name
         self.validateSideKickName(name)
         self.gender = gender
-        self.validateGender(gender)
-        self.setSideKickStatus = hero
-        self.validateSideKickHero(hero)
-        self.setUniverse = universe
-        self.validateUniverse(universe)
+        self.setGender(gender)
+        self.setSideKickStatus(status)
+        self.setSideKickHero(hero)
+        self.setUniverse(universe)
     def __repr__(self):
         '''
         Return a string representation of the object
